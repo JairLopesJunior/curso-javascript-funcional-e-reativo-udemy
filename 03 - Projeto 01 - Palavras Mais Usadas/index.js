@@ -10,4 +10,5 @@ fn.lerDiretorio(caminho)
     .then(todoConteudo => todoConteudo.split('\n'))
     .then(linhas => fn.removerSeVazio(linhas))
     .then(linhas => fn.removerSeIncluir(linhas, '-->'))
+    .then(linhas => fn.removerSeApenasNumero(linhas))
     .then(console.log);

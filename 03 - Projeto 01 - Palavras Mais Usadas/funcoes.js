@@ -41,7 +41,10 @@ function removerSeIncluir(array, padraoTextual) {
 }
 
 function removerSeApenasNumero(array) {
-
+    return array.filter(el => {
+        const num = parseInt(el.trim());
+        return num!== num;
+    });
 }
 
 module.exports = {
@@ -50,5 +53,6 @@ module.exports = {
     lerArquivos,
     elementoTerminadosCom,
     removerSeVazio,
-    removerSeIncluir
+    removerSeIncluir,
+    removerSeApenasNumero
 };
