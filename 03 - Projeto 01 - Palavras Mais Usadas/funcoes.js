@@ -28,12 +28,20 @@ function lerArquivos(caminhos) {
     return Promise.all(caminhos.map(caminho => lerArquivo(caminho)));
 }
 
-function elementoTerminadosCom(array, padrao) {
-    return array.filter(el => el.endsWith(padrao));
+function elementoTerminadosCom(array, padraoTextual) {
+    return array.filter(el => el.endsWith(padraoTextual));
 }
 
 function removerSeVazio(array) {
     return array.filter(el => el.trim());
+}
+
+function removerSeIncluir(array, padraoTextual) {
+    return array.filter(el => !el.includes(padraoTextual));
+}
+
+function removerSeApenasNumero(array) {
+
 }
 
 module.exports = {
@@ -41,5 +49,6 @@ module.exports = {
     lerArquivo,
     lerArquivos,
     elementoTerminadosCom,
-    removerSeVazio
+    removerSeVazio,
+    removerSeIncluir
 };
