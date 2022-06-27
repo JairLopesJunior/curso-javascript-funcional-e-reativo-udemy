@@ -6,4 +6,6 @@ const caminho = path.join(__dirname, 'legendas');
 fn.lerDiretorio(caminho)
     .then(arquivos => fn.elementoTerminadosCom(arquivos, '.srt'))
     .then(arquivosSRT => fn.lerArquivos(arquivosSRT))
+    .then(conteudos => conteudos.join('\n'))
+    .then(todoConteudo => todoConteudo.split('\n'))
     .then(console.log);
