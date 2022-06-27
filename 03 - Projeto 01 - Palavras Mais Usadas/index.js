@@ -5,10 +5,10 @@ const caminho = path.join(__dirname, 'legendas');
 
 fn.lerDiretorio(caminho)
     .then(arquivos => fn.elementoTerminadosCom(arquivos, '.srt'))
-    .then(arquivosSRT => fn.lerArquivos(arquivosSRT))
+    .then(fn.lerArquivos)
     .then(conteudos => conteudos.join('\n'))
     .then(todoConteudo => todoConteudo.split('\n'))
-    .then(linhas => fn.removerSeVazio(linhas))
-    .then(linhas => fn.removerSeIncluir(linhas, '-->'))
-    .then(linhas => fn.removerSeApenasNumero(linhas))
+    .then(fn.removerElementosSeVazio)
+    .then(fn.removerElementosSeIncluir('-->'))
+    .then(fn.removerElementosSeApenasNumero)
     .then(console.log);
