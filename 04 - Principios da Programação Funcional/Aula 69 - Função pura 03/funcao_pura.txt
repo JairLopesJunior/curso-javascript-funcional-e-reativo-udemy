@@ -1,0 +1,3 @@
+Função Pura 03
+
+Priorize o máximo possível as funções puras.
