@@ -1,0 +1,4 @@
+Higher-Order Function (Função de Ordem Superior)
+
+
+"Funções que operam em outras funções, tomando-as como argumentos ou retornando-as, são chamadas de higher-order functions"
