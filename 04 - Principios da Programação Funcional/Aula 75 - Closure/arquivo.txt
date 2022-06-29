@@ -1,0 +1,5 @@
+Closure
+
+Escopo léxico // É onde a função foi definida.
+
+"Closure é quando uma função 'Lembra' seu escopo léxico, mesmo quando a função é executada fora desse escopo léxico"
