@@ -1,0 +1,3 @@
+Functors
+
+"Functors são objetos que implementam a função MAP, que também é um 'wrapper' de um valor"
