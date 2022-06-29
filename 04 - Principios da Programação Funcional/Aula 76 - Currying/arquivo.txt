@@ -1,0 +1,3 @@
+Currying
+
+"É quando você quer em vez de passar todos os parametros uma unica vez para a função, você passa os parametros de forma parcial"
