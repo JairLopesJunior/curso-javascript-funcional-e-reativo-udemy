@@ -1,0 +1,9 @@
+Instalação do RxJS
+
+> npm init -y // Cria o package.json
+
+> touch .gitignore // Adicionar "node_modules" dentro do arquivo
+
+> npm i rxjs // Instala a dependência do RxJS
+
+> npm i rxjs // Instalando o RxJS
