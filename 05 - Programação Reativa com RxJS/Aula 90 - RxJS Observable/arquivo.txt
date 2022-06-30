@@ -1,0 +1,11 @@
+RxJS Observable
+
+Entendendo Observables:
+
+callbacks -> Promises -> Observables
+
+Quais são as vantagens dos Observables relacionados as Promises?
+
+- Reusável
+- Stream de Dados
+- Operadores
