@@ -1,0 +1,9 @@
+Padrão Observer 01
+
+O Padrão Observer:
+
+- Padrão Orientado a Evento!
+
+Subject // É o responsável por detectar o evento.
+
+Observer // Os interessados.
