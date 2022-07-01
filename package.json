@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JairLopesJunior/curso-javascript-funcional-e-reativo-udemy#readme",
   "dependencies": {
-    "rxjs": "^7.5.5"
+    "rxjs": "^6.0.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }
