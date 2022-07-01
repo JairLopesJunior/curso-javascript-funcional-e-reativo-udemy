@@ -1,0 +1,3 @@
+Scheduler
+
+"O uso de Observables não está ligado necessariamente a Assincronismo, o padrão é o processamento ser feito de forma sincrona"
