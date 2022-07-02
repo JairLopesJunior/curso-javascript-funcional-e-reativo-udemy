@@ -16,10 +16,13 @@ function primeiro() {
 function ultimo() {
     return function(source) {
         return Observable.create(subscriber => {
+            let ultimo;
             source.subscribe({
                 next(v) {
-                    console.log('fh ' + i)
-                    subscriber.next(v);
+                    ultimo = v;
+                },
+                complete() {
+                    subscriber.next(ultimo);
                     subscriber.complete();
                 }
             });
@@ -28,6 +31,8 @@ function ultimo() {
 }
 
 from([1, 2, 3, 4, 5])
-    //.pipe(primeiro())
-    .pipe(ultimo())
+    .pipe(
+        primeiro(),
+        ultimo()
+    )
     .subscribe(console.log);
