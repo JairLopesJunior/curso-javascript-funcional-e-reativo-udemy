@@ -1,0 +1,8 @@
+História e Características do Lambda Calculus
+
+O Criador: Alonzo Church
+
+O que é Lambda Calculus?
+R: É um sistema matemático formal que expressa computações com base na abstração e aplicação de funções. É um modelo universal de
+computação que pode ser usado para simular qualquer máquina de Turing. Foi introduzido pelo matemático Alonzo Church na década de 
+1930 como parte de sua pesquisa sobre os fundamentos da matemática.
