@@ -1,0 +1,3 @@
+Operador MergeMap
+
+mergeMap // O objetivo dele é fazer um merge (juntar), juntar dois Observables.
