@@ -41,8 +41,24 @@ function elementoTerminadosCom(padraoTextual) {
     }));
 }
 
-function removerElementosSeVazio(array) {
-    return array.filter(el => el.trim());
+function separarTextoPor(simbolo) {
+    return createPipeableOperator(subscriber => ({
+        next(texto) {
+            texto.split(simbolo).forEach(parte => {
+                subscriber.next(parte);
+            });
+        }
+    }));
+}
+
+function removerElementosSeVazio() {
+    return createPipeableOperator(subscriber => ({
+        next(texto) {
+            if(texto.trim()) {
+                subscriber.next(texto);
+            }
+        }
+    }));
 }
 
 function removerElementosSeIncluir(padraoTextual) {
@@ -66,16 +82,6 @@ function removerSimbolos(simbolos) {
             }, el)
         });
     }
-}
-
-function separarTextoPor(simbolo) {
-    return createPipeableOperator(subscriber => ({
-        next(texto) {
-            texto.split(simbolo).forEach(parte => {
-                subscriber.next(parte);
-            });
-        }
-    }));
 }
 
 function ordernarPorAtribNumerico(attr, ordem = 'asc') {
@@ -102,8 +108,8 @@ function createPipeableOperator(operatorFn) {
 module.exports = {
     lerDiretorio,
     lerArquivo,
-    separarTextoPor,
     elementoTerminadosCom,
+    separarTextoPor,
     removerElementosSeVazio,
     removerElementosSeIncluir,
     removerElementosSeApenasNumero,

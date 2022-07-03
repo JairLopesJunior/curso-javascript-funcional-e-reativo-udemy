@@ -10,7 +10,6 @@ const simbolos = [
 ];
 
 const mesclarElementos = conteudos => conteudos.join(' ');
-const separarPorLinhas = todoConteudo => todoConteudo.split('\n');
 const separarPorPalavras = todoConteudo => todoConteudo.split(' ');
 
 function agruparElementos(palavras) {
@@ -26,23 +25,7 @@ fn.lerDiretorio(caminho)
     .pipe(
         fn.elementoTerminadosCom('.srt'),
         fn.lerArquivo(),
-        fn.separarTextoPor('\n')
+        fn.separarTextoPor('\n'),
+        fn.removerElementosSeVazio(),
     )
     .subscribe(console.log);
-
-/*fn.lerDiretorio(caminho)
-    .then(arquivos => fn.elementoTerminadosCom(arquivos, '.srt'))
-    .then(fn.lerArquivos)
-    .then(mesclarElementos)
-    .then(separarPorLinhas)
-    .then(fn.removerElementosSeVazio)
-    .then(fn.removerElementosSeIncluir('-->'))
-    .then(fn.removerElementosSeApenasNumero)
-    .then(fn.removerSimbolos(simbolos))
-    .then(mesclarElementos)
-    .then(separarPorPalavras)
-    .then(fn.removerElementosSeVazio)
-    .then(fn.removerElementosSeApenasNumero)
-    .then(agruparElementos)
-    .then(fn.ordernarPorAtribNumerico('qtde', 'desc'))
-    .then(console.log);*/
