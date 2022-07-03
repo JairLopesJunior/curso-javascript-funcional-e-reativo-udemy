@@ -1,0 +1,16 @@
+Ordenando Palavras
+
+Lodash: É uma biblioteca JavaScript que fornece funções utilitárias para tarefas comuns de programação usando o paradigma 
+de programação funcional.
+
+Instalação:
+
+> npm i lodash
+
+Para importar:
+
+const _ = require('lodash');
+
+Função Utilitária:
+
+_.sortBy(array, campoASerOrdenado); // Ordena o array em forma ASC ou DESC pelo campo do array
