@@ -41,16 +41,6 @@ function elementoTerminadosCom(padraoTextual) {
     }));
 }
 
-function separarTextoPor(simbolo) {
-    return createPipeableOperator(subscriber => ({
-        next(texto) {
-            texto.split(simbolo).forEach(parte => {
-                subscriber.next(parte);
-            });
-        }
-    }));
-}
-
 function removerElementosSeVazio(array) {
     return array.filter(el => el.trim());
 }
@@ -103,7 +93,6 @@ module.exports = {
     lerDiretorio,
     lerArquivo,
     elementoTerminadosCom,
-    separarTextoPor,
     removerElementosSeVazio,
     removerElementosSeIncluir,
     removerElementosSeApenasNumero,
