@@ -24,7 +24,8 @@ function agruparElementos(palavras) {
 
 fn.lerDiretorio(caminho)
     .pipe(
-        fn.elementoTerminadosCom('.srt')
+        fn.elementoTerminadosCom('.srt'),
+        fn.lerArquivo()
     )
     .subscribe(console.log);
 
