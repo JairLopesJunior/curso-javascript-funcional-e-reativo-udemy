@@ -1,0 +1,3 @@
+Agrupando Palavras 01
+
+toArray // Coleta todas as emissões da fonte e as emite como uma matriz quando a fonte é concluída.
